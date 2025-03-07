@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="bg-gradient-to-br from-blue-300 to bg-purple-300 p-4 min-h-screen">
+    <!-- T I T L E -->
+    <div>
+        <h1 class="title text-3xl font-bold text-center text-pink-600 mb-6 uppercase"> Rock Paper Scissors</h1>
+        <div class="h-1 w-52 bg-gradient-to-r from-pink-500 to-purple-400 rounded mx-auto mb-6"></div>
+    </div>
+    <!-- S C O R E -->
+    <div class="flex justify-center">
+        <div
+            class="container relative p-4 border-2 rounded-lg bg-transparent border-gray-200 shadow-xl w-full max-w-lg">
+            <div
+                class="absolute top-1/2 left-0 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-pink-500 text-white px-2 py-1 rounded-lg">
+                YOU
+            </div>
+            <div
+                class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-pink-500 text-white px-2 py-1 rounded-lg">
+                COMPUTER
+            </div>
+            <div class="flex justify-center space-x-8">
+                <p id="player-score" class="text-center text-orange-500 text-3xl font-bold"> 0 </p>
+                <p class="text-center text-white text-3xl font-bold"> : </p>
+                <p id="computer-score" class="text-center text-pink-500 text-3xl font-bold"> 0 </p>
+            </div>
+        </div>
+    </div>
+    <!-- C H O I C E D I S P L A Y -->
+    <div class="flex justify-between items-center mt-10 ">
+        <div class="text-center w-2/5">
+            <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">Your Choice</p>
+            <div id="player-choice"
+                class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center shadow-md border-8 border-orange-500">
+                <i class='bx bx-question-mark text-gray-400 text-3xl'></i>
+            </div>
+        </div>
+
+        <div class="font-bold text-gray-500">VS</div>
+
+        <div class="text-center w-2/5">
+            <p class="text-xs text-gray-500 uppercase tracking-wide mb-2">Computer's Choice</p>
+            <div id="computer-choice"
+                class="w-24 h-24 mx-auto bg-gray-100 rounded-full flex items-center justify-center shadow-md border-8 border-pink-500">
+                <i class="bx bx-question-mark text-gray-400 text-3xl"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- R E S U L T -->
+    <div class="flex justify-center">
+        <div id="result"
+            class="text-center p-3 text-lg w-56  font-medium min-h-16 mt-6 rounded-lg transition-all duration-300 ">
+        </div>
+    </div>
+    <!-- W I N N E R -->
+    <div id="game-winner" class="hidden text-center text-xl font-bold text-pink-600 my-4 animate-pulse "></div>
+
+    <!-- S E L E C T -->
+    <div id="controls" class=" flex justify-center gap-5 mt-20">
+        <button id="rock"
+            class="w-16 h-16 bg-gradient-to-br from-gray-400 to-white rounded-full border-2 border-gray-200 flex items-center justify-center shadow-md hover:border-indigo-500 hover:-translate-y-1 transition-all duration-200">
+            <img src="images/stone.png" alt="stone" class="w-10 h-10 object-contain">
+        </button>
+        <button id="paper"
+            class="w-16 h-16 bg-gradient-to-br from-gray-400 to-white rounded-full border-2 border-gray-200 flex items-center justify-center shadow-md hover:border-indigo-500 hover:-translate-y-1 transition-all duration-200">
+            <img src="images/paper.png" alt="paper" class="w-10 h-10">
+        </button>
+        <button id="scissors"
+            class="w-16 h-16 bg-gradient-to-br from-gray-400 to-white rounded-full border-2 border-gray-200 flex items-center justify-center shadow-md hover:border-indigo-500 hover:-translate-y-1 transition-all duration-200">
+            <img src="images/scissors.png" alt="scissors" class="w-10 h-10">
+        </button>
+    </div>
+
+    <!-- R E S E T -->
+    <div class="flex justify-center">
+        <button id="reset-btn"
+            class="hidden mt-10 uppercase mx-auto bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 px-6 rounded-full font-medium hover:bg-indigo-700 hover:shadow-lg transition-all duration-200">
+            Start again
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
